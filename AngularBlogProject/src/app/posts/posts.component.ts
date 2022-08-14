@@ -1,12 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import postData from '../../data/posts.json';
-
+import userData from '../../data/users.json'
 interface  Posts {
   userId: number;
   id:number;
   title: string;
   body:string;
   imageId:number;
+}
+interface Users {
+  id: number,
+  name: string,
+  username: string,
+  email: string,
+  address: {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: {
+      lat: string,
+      lng: string
+    }
+  }
+  phone: string,
+  website: string,
+  company: {
+    name: string,
+    catchPhrase: string,
+    bs: string
+  }
 }
 @Component({
   selector: 'app-posts',
@@ -16,8 +39,11 @@ interface  Posts {
 export class PostsComponent implements OnInit {
 
   constructor() { }
+  users: Users[] =userData;
   posts: Posts[] = postData;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
 
 
