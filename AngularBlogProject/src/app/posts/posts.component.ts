@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import postData from '../../data/posts.json';
-import userData from '../../data/users.json'
+import userData from '../../data/users.json';
 interface  Posts {
   userId: number;
   id:number;
@@ -31,6 +31,16 @@ interface Users {
     bs: string
   }
 }
+
+interface Comments{
+  postId:number;
+  id:number;
+  name:string;
+  email:string;
+  body:string;
+  userId:number;
+
+}
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -38,13 +48,17 @@ interface Users {
 })
 export class PostsComponent implements OnInit {
 
+
   constructor() { }
-  users: Users[] =userData;
+  users: Users[] = userData;
   posts: Posts[] = postData;
+
   ngOnInit(): void {
 
   }
-
+viewProduct(post:any){
+    this.posts = post;
+}
 
 
 }
