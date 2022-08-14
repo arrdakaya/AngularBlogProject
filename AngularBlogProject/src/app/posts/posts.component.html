@@ -1,0 +1,31 @@
+<header>
+  <div>
+    <br>
+    <hr>
+    <h1 class="mt-2 ms-5 fw-semibold">Example Blog Project</h1>
+
+  </div>
+</header>
+<body>
+
+<p class="mt-2 ms-5 d-inline-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet animi deleniti dolore doloribus ducimus eaque, eius eos et exercitationem explicabo fuga ipsa ipsum libero minima molestiae molestias necessitatibus nisi possimus qui quibusdam quisquam sapiente similique sint tempora totam ullam voluptatibus? A adipisci dolorum ipsa mollitia nostrum nulla, voluptatum. Quaerat.</p>
+
+<div class="container-12 mx-5" >
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
+      <div class="col mt-3" *ngFor="let post of posts">
+          <div class="card ">
+
+          <img src="/assets/images/image{{post.imageId}}.jpg" alt="" class="card-img-top rounded-0">
+          <div class="card-body">
+            <p class="postTitle"> {{post.title}}</p>
+            <button  type="button" class="btn btn-outline-dark float-start rounded-0 ">View</button>
+            <button  type="button" class="btn btn-outline-dark    rounded-0">Edit</button>
+            <span class="badge text-bg-secondary float-end mt-2">post-{{post.id}}</span>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
