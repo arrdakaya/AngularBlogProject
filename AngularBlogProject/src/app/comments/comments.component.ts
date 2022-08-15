@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import postData from '../../data/posts.json';
 import userData from '../../data/users.json';
 import commentData from '../../data/comments.json';
-
-export interface  Posts {
+import postData from "../../data/posts.json";
+interface  Posts {
   userId: number;
   id:number;
   title: string;
   body:string;
   imageId:number;
 }
-export interface Users {
+interface Users {
   id: number,
   name: string,
   username: string,
@@ -34,7 +33,7 @@ export interface Users {
   }
 }
 
-export interface Comments{
+interface Comments{
   postId:number;
   id:number;
   name:string;
@@ -43,46 +42,18 @@ export interface Comments{
   userId:number;
 
 }
-
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css']
+  selector: 'app-comments',
+  templateUrl: './comments.component.html',
+  styleUrls: ['./comments.component.css']
 })
-export class PostsComponent implements OnInit {
+export class CommentsComponent implements OnInit {
 
-  postId:number = 0;
-  postUserId:number = 0;
-  postTitle:string = "";
-  postBody:string = "";
-  postImageId:number = 0;
-
-
-
-  constructor() {
-
-  }
-
+  constructor() { }
   users: Users[] = userData;
   posts: Posts[] = postData;
   comments: Comments[] = commentData;
-
-
-public selectedPost(post:any) {
-
-  this.postId = post.id;
-  this.postUserId = post.userId;
-  this.postTitle = post.title;
-  this.postBody = post.body;
-  this.postImageId = post.imageId;
-
-
-}
-
   ngOnInit(): void {
-
   }
-
-
 
 }
