@@ -17,18 +17,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
     <div class="col "
          *ngFor="let post of posts | paginate:{itemsPerPage: tableSize, currentPage:page,totalItems:count} let i =index">
-      <div class="card mt-2">
-        <img (click)="selectedPost(post)" src="/assets/images/image{{post.imageId}}.jpg" alt="" class="card-img-top rounded-0">
-        <div class="card-body">
-          <p class="postTitle"> {{post.title}}</p>
-          <button (click)="selectedPost(post)" type="button" class="btn btn-outline-dark float-start rounded-0"
-                  data-bs-toggle="modal" data-bs-target="#myModal">View
-          </button>
-          <button type="button" class="btn btn-outline-dark rounded-0">Edit</button>
-          <span class="badge text-bg-secondary float-end mt-2">post-{{post.id}}</span>
-        </div>
-      </div>
-
+      <app-card [postInput]="post"></app-card>
 
     </div>
   </div>
@@ -45,10 +34,6 @@
       <div class="row">
         <div class="mt-2">
 
-          <img class="float-start mx-3 mt-2" src="/assets/images/image{{postImageId}}.jpg" alt="">
-          <span style=" margin-top: 1rem;" class=" fw-semibold fs-4  ">{{postTitle}} </span>
-          <div><span style="" class=" ">{{postBody}} </span></div>
-
 
 
 
@@ -61,11 +46,11 @@
                 <div class="">
                   <h5 class="my-2 mt-4">Comments</h5>
 
-                  <div class="comments commentBg"  *ngFor="let comment of comments">
+                  <div class="comments commentBg" *ngFor="let comment of comments">
 
                     <div class="users" *ngFor="let user of users">
                       <div *ngIf="comment.userId == user.id">
-                        <div *ngIf="comment.postId == postId">
+                        <!--<div *ngIf="comment.postBodyId == postId">
                           <img class="rounded-circle m-2 profile " src="/assets/images/profile/profile{{user.id}}.jpg"
                                alt="">
 
@@ -74,7 +59,7 @@
                             <div class="mb-1">{{comment.name}}</div>
                             <p class="commentBody pb-3">{{comment.body}}</p>
                           </div>
-                        </div>
+                        </div>-->
                       </div>
                     </div>
 

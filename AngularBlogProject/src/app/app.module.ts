@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { CommentsComponent } from './comments/comments.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     SinglePostComponent,
-    CommentsComponent
+    CommentsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

@@ -52,7 +52,7 @@ export interface Comments {
 })
 export class PostsComponent implements OnInit {
 
-  // @Input() post: {postId:number,postUserId:number,postTitle:string,postBody:string,postImageId:number}
+
 
   title = 'pagination';
   page: number =1;
@@ -60,11 +60,7 @@ export class PostsComponent implements OnInit {
   tableSize:number=8;
 
 
-  postId: number = 0;
-  postUserId: number = 0;
-  postTitle: string = "";
-  postBody: string = "";
-  postImageId: number = 0;
+
 
 
   constructor() {
@@ -76,16 +72,7 @@ export class PostsComponent implements OnInit {
   comments: Comments[] = commentData;
 
 
-  public selectedPost(post: any) {
 
-    this.postId = post.id;
-    this.postUserId = post.userId;
-    this.postTitle = post.title;
-    this.postBody = post.body;
-    this.postImageId = post.imageId;
-
-
-  }
 
   ngOnInit(): void {
 
