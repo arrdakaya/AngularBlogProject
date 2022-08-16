@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import postData from '../../data/posts.json';
 import userData from '../../data/users.json';
 import commentData from '../../data/comments.json';
@@ -51,6 +51,8 @@ export interface Comments {
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+
+  // @Input() post: {postId:number,postUserId:number,postTitle:string,postBody:string,postImageId:number}
 
   title = 'pagination';
   page: number =1;
