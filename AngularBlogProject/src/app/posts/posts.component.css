@@ -1,112 +1,93 @@
 
-.container {
+.container{
   max-width: 1080px;
 }
-
-.commentBg {
-  background-color: #EEEEEE;
+.commentBg{
+background-color: #EEEEEE;
 }
-
-.postBody {
+.postBody{
   font-size: 1rem;
 }
-
-.commentBody {
+.commentBody{
   font-size: 0.8rem;
 }
-
-.profile {
+.profile{
   width: 2rem;
 }
-
-.postTitle {
+.postTitle{
 
   height: 7vh;
 }
 
-@media only screen and (max-width: 1600px) {
-  .postTitle {
+@media only screen and (max-width:1600px) {
+  .postTitle{
     font-size: 0.8rem;
   }
-
-  .btn {
+  .btn{
+    width: 4rem;
+    font-size:0.8rem;
+  }
+}
+@media only screen and (max-width:1400px) {
+  .postTitle{
+    font-size: 0.8rem;
+  }
+  .btn{
     width: 4rem;
     font-size: 0.8rem;
   }
 }
-
-@media only screen and (max-width: 1400px) {
-  .postTitle {
+@media only screen and (max-width:1200px) {
+  .postTitle{
     font-size: 0.8rem;
   }
-
-  .btn {
-    width: 4rem;
-    font-size: 0.8rem;
+  .btn{
+    width: 3rem;
+    font-size: 0.6rem;
   }
 }
-
-@media only screen and (max-width: 1200px) {
-  .postTitle {
-    font-size: 0.8rem;
+@media only screen and (max-width:1000px ) {
+  .postTitle{
+    font-size: 0.7rem;
   }
-
-  .btn {
+  .btn{
     width: 3rem;
     font-size: 0.6rem;
   }
 }
 
-@media only screen and (max-width: 1000px ) {
-  .postTitle {
-    font-size: 0.7rem;
-  }
-
-  .btn {
-    width: 3rem;
-    font-size: 0.6rem;
-  }
-}
-
-@media only screen and (max-width: 768px ) {
-  .postTitle {
+@media only screen and (max-width:768px ) {
+  .postTitle{
     font-size: 0.9rem;
   }
-
-  .btn {
+  .btn{
     width: 50px;
     font-size: 10px;
   }
 }
 
-@media only screen and (max-width: 578px ) {
-  .postTitle {
+@media only screen and (max-width:578px ) {
+  .postTitle{
     font-size: 0.9rem;
   }
-
-  .btn {
+  .btn{
     width: 50px;
     font-size: 10px;
   }
 }
-
-@media only screen and (max-width: 375px ) {
-  .postTitle {
+@media only screen and (max-width:375px ) {
+  .postTitle{
     font-size: 0.8rem;
   }
-
-  .btn {
+  .btn{
     width: 50px;
     font-size: 10px;
   }
-}
-
-@media only screen and (max-width: 280px ) {
-  .postTitle {
+}@media only screen and (max-width:280px ) {
+  .postTitle{
     font-size: 0.7rem;
   }
-
-  .btn {
+  .btn{
     width: 50px;
     font-size: 10px;
   }
