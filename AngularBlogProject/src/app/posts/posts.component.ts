@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import postData from '../../data/posts.json';
 import userData from '../../data/users.json';
 import commentData from '../../data/comments.json';
 
-export interface  Posts {
+export interface Posts {
   userId: number;
-  id:number;
+  id: number;
   title: string;
-  body:string;
-  imageId:number;
+  body: string;
+  imageId: number;
 }
+
 export interface Users {
   id: number,
   name: string,
@@ -34,13 +35,13 @@ export interface Users {
   }
 }
 
-export interface Comments{
-  postId:number;
-  id:number;
-  name:string;
-  email:string;
-  body:string;
-  userId:number;
+export interface Comments {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+  userId: number;
 
 }
 
@@ -51,12 +52,17 @@ export interface Comments{
 })
 export class PostsComponent implements OnInit {
 
-  postId:number = 0;
-  postUserId:number = 0;
-  postTitle:string = "";
-  postBody:string = "";
-  postImageId:number = 0;
+  title = 'pagination';
+  page: number =1;
+  count:number =0;
+  tableSize:number=8;
 
+
+  postId: number = 0;
+  postUserId: number = 0;
+  postTitle: string = "";
+  postBody: string = "";
+  postImageId: number = 0;
 
 
   constructor() {
@@ -68,21 +74,23 @@ export class PostsComponent implements OnInit {
   comments: Comments[] = commentData;
 
 
-public selectedPost(post:any) {
+  public selectedPost(post: any) {
 
-  this.postId = post.id;
-  this.postUserId = post.userId;
-  this.postTitle = post.title;
-  this.postBody = post.body;
-  this.postImageId = post.imageId;
+    this.postId = post.id;
+    this.postUserId = post.userId;
+    this.postTitle = post.title;
+    this.postBody = post.body;
+    this.postImageId = post.imageId;
 
 
-}
+  }
 
   ngOnInit(): void {
 
   }
 
+  onTableDataChange(event:any){
+    this.page = event;
 
-
+  }
 }
