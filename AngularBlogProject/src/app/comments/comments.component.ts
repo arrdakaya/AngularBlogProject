@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import userData from '../../data/users.json';
 import commentData from '../../data/comments.json';
 import postData from "../../data/posts.json";
-interface  Posts {
+
+interface Posts {
   userId: number;
-  id:number;
+  id: number;
   title: string;
-  body:string;
-  imageId:number;
+  body: string;
+  imageId: number;
 }
+
 interface Users {
   id: number,
   name: string,
@@ -33,15 +35,16 @@ interface Users {
   }
 }
 
-interface Comments{
-  postId:number;
-  id:number;
-  name:string;
-  email:string;
-  body:string;
-  userId:number;
+interface Comments {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+  userId: number;
 
 }
+
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
@@ -49,10 +52,13 @@ interface Comments{
 })
 export class CommentsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
+
   users: Users[] = userData;
   posts: Posts[] = postData;
   comments: Comments[] = commentData;
+
   ngOnInit(): void {
   }
 
