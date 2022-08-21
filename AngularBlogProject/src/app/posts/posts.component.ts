@@ -20,29 +20,35 @@ export interface Posts {
 })
 export class PostsComponent implements OnInit {
 
-
-
   title = 'pagination';
   page: number =1;
   count:number =0;
   tableSize:number=8;
 
 
-
-
-
   constructor() {
 
   }
-
+  cardId:number = 0;
+  cardBody:string = "";
+  cardUserId:number = 0;
+  cardTitle:string = "";
+  cardImageId:number = 0;
 
   posts: Posts[] = postData;
 
 
 
-
-
   ngOnInit(): void {
+
+  }
+
+  selectedPost(postCard:any){
+    this.cardId = postCard.id;
+    this.cardBody = postCard.body;
+    this.cardUserId = postCard.userId;
+    this.cardTitle = postCard.title;
+    this.cardImageId = postCard.imageId;
 
   }
 

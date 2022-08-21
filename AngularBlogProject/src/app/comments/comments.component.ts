@@ -45,7 +45,7 @@ export interface Comments {
 })
 export class CommentsComponent implements OnInit {
 
-  @Input() postInput: any;
+  @Input() postComment: any;
 
   constructor() {}
   ngOnInit(): void {}

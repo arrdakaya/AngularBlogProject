@@ -12,15 +12,19 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 export class CardComponent implements OnInit {
 
-  postId:number = 0;
+  cardId:number = 0;
 
   @Input() postInput: any;
+  @Output() selectedCard:EventEmitter<any> = new EventEmitter()
+
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.selectedCard.emit(this.postInput)
+  }
 
   public selectedPost(postInput:any){
-  this.postId = postInput.id;
+  this.selectedCard.emit(postInput);
   }
 }

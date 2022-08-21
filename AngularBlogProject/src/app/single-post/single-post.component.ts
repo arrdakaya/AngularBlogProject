@@ -14,7 +14,7 @@ export class SinglePostComponent implements OnInit {
 
 
 
-  @Input() postInput: any;
+  @Input() cardInput: any;
   constructor() { }
 
   ngOnInit(): void {
