@@ -12,14 +12,15 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 export class CardComponent implements OnInit {
 
-
+  postId:number = 0;
 
   @Input() postInput: any;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  public selectedPost(postInput:any){
+  this.postId = postInput.id;
   }
-
 }

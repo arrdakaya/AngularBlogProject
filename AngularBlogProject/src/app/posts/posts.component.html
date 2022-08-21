@@ -34,7 +34,7 @@
       <div class="row">
         <div class="mt-2">
 
-
+<app-single-post  [postInput]="posts"></app-single-post>
 
 
         </div>
@@ -44,26 +44,9 @@
             <div class="col mx-3">
               <div class=" mb-4">
                 <div class="">
-                  <h5 class="my-2 mt-4">Comments</h5>
 
-                  <div class="comments commentBg" *ngFor="let comment of comments">
 
-                    <div class="users" *ngFor="let user of users">
-                      <div *ngIf="comment.userId == user.id">
-                        <!--<div *ngIf="comment.postBodyId == postId">
-                          <img class="rounded-circle m-2 profile " src="/assets/images/profile/profile{{user.id}}.jpg"
-                               alt="">
 
-                          <span class="fw-semibold">{{user.name}}</span>
-                          <div class="ms-5 ">
-                            <div class="mb-1">{{comment.name}}</div>
-                            <p class="commentBody pb-3">{{comment.body}}</p>
-                          </div>
-                        </div>-->
-                      </div>
-                    </div>
-
-                  </div>
                 </div>
               </div>
             </div>
