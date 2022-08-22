@@ -8,20 +8,24 @@ import { PostsComponent } from './posts/posts.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CardComponent } from './card/card.component';
-
+import { EditFormComponent } from './edit-form/edit-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     SinglePostComponent,
     CommentsComponent,
-    CardComponent
+    CardComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

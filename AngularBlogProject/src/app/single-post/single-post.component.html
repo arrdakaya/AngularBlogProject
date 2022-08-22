@@ -1,13 +1,13 @@
 <div class="row">
-  <div class="mt-2">
-    <img class="float-start mx-3 mt-2" src="/assets/images/image1.jpg" alt="">
-    <span style=" margin-top: 1rem;" class=" fw-semibold fs-4  ">{{cardInput.title}} </span>
-    <div><span style="" class=" ">{{cardInput.body}} </span></div>
+  <div class=" mt-2 me-2">
+    <img  class="postImage float-start mx-3 mt-2 me-3" src="/assets/images/image{{cardInput.cardImageId}}.jpg" alt="">
+     <div  class="cardTitle fw-semibold fs-4 "><span>{{cardInput.cardTitle}} </span></div>
+    <div style="margin:0px 20px"><span class=" ">{{cardInput.cardBody}} </span></div>
 
 
   </div>
 
-  <app-comments></app-comments>
+  <app-comments [postComment]="cardInput" ></app-comments>
 
 
 </div>

@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import postData from '../../data/posts.json';
-import userData from '../../data/users.json';
-import commentData from '../../data/comments.json';
+
 
 export interface Posts {
   userId: number;

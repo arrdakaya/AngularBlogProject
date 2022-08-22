@@ -12,7 +12,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 export class CardComponent implements OnInit {
 
-  cardId:number = 0;
+
 
   @Input() postInput: any;
   @Output() selectedCard:EventEmitter<any> = new EventEmitter()
@@ -26,5 +26,8 @@ export class CardComponent implements OnInit {
 
   public selectedPost(postInput:any){
   this.selectedCard.emit(postInput);
+  }
+  update(postInput:any){
+
   }
 }

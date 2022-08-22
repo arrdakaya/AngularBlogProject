@@ -3,8 +3,7 @@
     <br>
     <hr>
     <h1 class="mt-2 ms-5 fw-semibold">Example Blog Project</h1>
-{{cardId}}
-    {{cardBody}}
+
   </div>
 </header>
 <body>
@@ -25,14 +24,27 @@
 
 
 </div>
-<div class="modal" id="myModal">
+<div class="modal" id="viewModal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h2>Post Details</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="viewModal"></button>
       </div>
-      <app-single-post></app-single-post> <!--bunları alamadık-->
+      <app-single-post [cardInput] = "{cardId,cardBody,cardTitle,cardImageId,cardUserId}"></app-single-post>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" id="editModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Post</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="editModal"></button>
+      </div>
+      <app-edit-form [editInput] = "{cardId,cardBody,cardTitle,cardImageId,cardUserId}" ></app-edit-form>
     </div>
 
   </div>

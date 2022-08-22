@@ -3,9 +3,10 @@
   <div class="card-body">
     <p class="postTitle"> {{postInput.title}}</p>
     <button (click)="selectedPost(postInput)" type="button" class="btn btn-outline-dark float-start rounded-0"
-            data-bs-toggle="modal" data-bs-target="#myModal">View
+            data-bs-toggle="modal" data-bs-target="#viewModal">View
     </button>
-    <button type="button" class="btn btn-outline-dark rounded-0">Edit</button>
+    <button (click)="selectedPost(postInput)" type="button" class="btn btn-outline-dark rounded-0"
+            data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
     <span class="badge text-bg-secondary float-end mt-2">post-{{postInput.id}}</span>
   </div>
 </div>

@@ -1,0 +1,16 @@
+<form>
+  <div class="mb-3 mx-3">
+    <label for="title" class="form-label mt-3">Title</label>
+    <input  [(ngModel)]="editInput.cardTitle" name="title" type="text" class="form-control" id="title">
+
+  </div>
+  <div class="mb-3 mx-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea style="height: 10rem"  [(ngModel)]="editInput.cardBody" name="body" type="text" class="form-control" id="description"></textarea>
+{{editInput.cardTitle}}
+    {{editInput.cardBody}}
+  </div>
+  <hr>
+
+  <button (click)="SaveChanges()" type="submit" class="mx-3 mb-3 btn btn-success float-end">Apply</button>
+</form>
