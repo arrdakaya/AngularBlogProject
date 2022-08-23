@@ -31,7 +31,7 @@
         <h2>Post Details</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="viewModal"></button>
       </div>
-      <app-single-post [cardInput] = "{cardId,cardBody,cardTitle,cardImageId,cardUserId}"></app-single-post>
+      <app-single-post [cardInput] = "selectedPostData"></app-single-post>
     </div>
 
   </div>
@@ -44,7 +44,7 @@
         <h2>Edit Post</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="editModal"></button>
       </div>
-      <app-edit-form [editInput] = "{cardId,cardBody,cardTitle,cardImageId,cardUserId}" ></app-edit-form>
+      <app-edit-form [editInput] = "selectedPostData" ></app-edit-form>
     </div>
 
   </div>

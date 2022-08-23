@@ -18,7 +18,8 @@ export class CardComponent implements OnInit {
   @Output() selectedCard:EventEmitter<any> = new EventEmitter()
 
 
-  constructor() { }
+
+
 
   ngOnInit(): void {
     this.selectedCard.emit(this.postInput)
@@ -26,8 +27,7 @@ export class CardComponent implements OnInit {
 
   public selectedPost(postInput:any){
   this.selectedCard.emit(postInput);
-  }
-  update(postInput:any){
 
   }
+
 }

@@ -10,6 +10,9 @@ import { CommentsComponent } from './comments/comments.component';
 import { CardComponent } from './card/card.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     NgxPaginationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

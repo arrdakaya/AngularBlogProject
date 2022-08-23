@@ -1,4 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component,Inject, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {Posts} from "../posts/posts.component";
 
 
 @Component({
@@ -8,15 +10,23 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class EditFormComponent implements OnInit {
   editCardTitle:string = "";
-  editCardBody:string= "";
+  editCardBody:string = "";
 
   @Input() editInput: any;
-
-  constructor() { }
+  // editCardTitle:string ="";
+  // editCardBody:string = "";
+  // constructor(public dialogRef:MatDialogRef<EditFormComponent>,
+  //             @Inject(MAT_DIALOG_DATA) public data: Posts,
+  //             ) {}
+  // onNoClick():void{
+  //   this.dialogRef.close();
+  // }
 
   ngOnInit(): void {
 
   }
+
+
   SaveChanges(){
 
     this.editCardTitle = this.editInput.cardTitle;
@@ -25,3 +35,5 @@ export class EditFormComponent implements OnInit {
 
   }
 }
+
+

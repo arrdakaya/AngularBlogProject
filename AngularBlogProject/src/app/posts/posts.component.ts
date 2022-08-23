@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+
 import postData from '../../data/posts.json';
+
 
 
 export interface Posts {
@@ -19,20 +21,18 @@ export interface Posts {
 })
 export class PostsComponent implements OnInit {
 
+  selectedPostData:any;
+
   title = 'pagination';
   page: number =1;
   count:number =0;
   tableSize:number=8;
 
 
-  constructor() {
+  constructor() {}
 
-  }
-  cardId:number = 0;
-  cardBody:string = "";
-  cardUserId:number = 0;
-  cardTitle:string = "";
-  cardImageId:number = 0;
+
+
 
   posts: Posts[] = postData;
 
@@ -43,11 +43,7 @@ export class PostsComponent implements OnInit {
   }
 
   selectedPost(postCard:any){
-    this.cardId = postCard.id;
-    this.cardBody = postCard.body;
-    this.cardUserId = postCard.userId;
-    this.cardTitle = postCard.title;
-    this.cardImageId = postCard.imageId;
+    this.selectedPostData = postCard;
 
   }
 
