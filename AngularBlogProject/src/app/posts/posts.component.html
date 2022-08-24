@@ -8,7 +8,7 @@
 </header>
 <body>
 
-<p class="mt-2 ms-5 d-inline-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet animi deleniti
+<p class="mt-2 ps-5 pe-4 d-inline-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet animi deleniti
   dolore doloribus ducimus eaque, eius eos et exercitationem explicabo fuga ipsa ipsum libero minima molestiae molestias
   necessitatibus nisi possimus qui quibusdam quisquam sapiente similique sint tempora totam ullam voluptatibus? A
   adipisci dolorum ipsa mollitia nostrum nulla, voluptatum. Quaerat.</p>
@@ -17,7 +17,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
     <div class="col "
          *ngFor="let post of posts | paginate:{itemsPerPage: tableSize, currentPage:page,totalItems:count} let i =index">
-      <app-card (selectedCard) ="selectedPost($event)" [postInput]="post"></app-card>
+      <app-card (selectedCard)="selectedPost($event)" [postInput]="post"></app-card>
 
     </div>
   </div>
@@ -31,7 +31,7 @@
         <h2>Post Details</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="viewModal"></button>
       </div>
-      <app-single-post [cardInput] = "selectedPostData"></app-single-post>
+      <app-single-post [cardInput]="selectedPostData"></app-single-post>
     </div>
 
   </div>
@@ -44,7 +44,7 @@
         <h2>Edit Post</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="editModal"></button>
       </div>
-      <app-edit-form [editInput] = "selectedPostData" ></app-edit-form>
+      <app-edit-form [editInput]="selectedPostData"></app-edit-form>
     </div>
 
   </div>

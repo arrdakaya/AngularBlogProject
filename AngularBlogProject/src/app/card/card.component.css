@@ -1,91 +1,116 @@
+
+.card-body{
+  width: 100%;
+}
 .postTitle {
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height:70px;
+  text-overflow:ellipsis;
 
-  height: 7vh;
-}
-@media only screen and (max-width: 1600px) {
-  .postTitle {
-    font-size: 0.8rem;
-  }
-
-  .btn {
-    width: 4rem;
-    font-size: 0.8rem;
-  }
 }
 
-@media only screen and (max-width: 1400px) {
-  .postTitle {
-    font-size: 0.8rem;
-  }
 
-  .btn {
-    width: 4rem;
-    font-size: 0.8rem;
-  }
-}
+/*@media only screen and (min-height: 1600px) {*/
+/*  .postTitle{*/
+/*    height: 7vh;*/
+/*  }*/
 
-@media only screen and (max-width: 1200px) {
-  .postTitle {
-    font-size: 0.8rem;
-  }
+/*  .btn {*/
+/*    width: 4rem;*/
+/*    font-size: 0.8rem;*/
+/*  }*/
+/*}*/
+/*@media only screen and (max-width: 1600px) {*/
+/*  .postTitle{*/
+/*    height: 7vh;*/
+/*  }*/
 
-  .btn {
-    width: 3rem;
-    font-size: 0.6rem;
-  }
-}
+/*  .btn {*/
+/*    width: 4rem;*/
+/*    font-size: 0.8rem;*/
+/*  }*/
+/*}*/
 
-@media only screen and (max-width: 1000px ) {
-  .postTitle {
-    font-size: 0.7rem;
-  }
+/*@media only screen and (max-width: 1400px) {*/
+/*  .postTitle{*/
+/*    height: 7vh;*/
+/*  }*/
 
-  .btn {
-    width: 3rem;
-    font-size: 0.6rem;
-  }
-}
+/*  .btn {*/
+/*    width: 4rem;*/
+/*    font-size: 0.8rem;*/
+/*  }*/
+/*}*/
 
-@media only screen and (max-width: 768px ) {
-  .postTitle {
-    font-size: 0.9rem;
-  }
+/*@media only screen and (max-width: 1200px) {*/
+/*  .postTitle{*/
+/*    height: 7vh;*/
+/*  }*/
 
-  .btn {
-    width: 50px;
-    font-size: 10px;
-  }
-}
+/*  .btn {*/
+/*    width: 3rem;*/
+/*    font-size: 0.6rem;*/
+/*  }*/
+/*}*/
 
-@media only screen and (max-width: 578px ) {
-  .postTitle {
-    font-size: 0.9rem;
-  }
+/*@media only screen and (max-width: 1000px ) {*/
+/*  .postTitle{*/
+/*    height: 7vh;*/
+/*  }*/
 
-  .btn {
-    width: 50px;
-    font-size: 10px;
-  }
-}
+/*  .btn {*/
+/*    width: 3rem;*/
+/*    font-size: 0.6rem;*/
+/*  }*/
+/*}*/
 
-@media only screen and (max-width: 375px ) {
-  .postTitle {
-    font-size: 0.8rem;
-  }
+/*@media only screen and (max-width: 768px ) {*/
+/*  .postTitle{*/
+/*    height: 8vh;*/
+/*  }*/
 
-  .btn {
-    width: 50px;
-    font-size: 10px;
-  }
-}
+/*  .btn {*/
+/*    width: 50px;*/
+/*    font-size: 10px;*/
+/*  }*/
+/*}*/
 
-@media only screen and (max-width: 280px ) {
-  .postTitle {
-    font-size: 0.7rem;
-  }
+/*@media only screen and (max-width: 578px ) {*/
 
-  .btn {
-    width: 50px;
-    font-size: 10px;
-  }
-}
+/*  .postTitle{*/
+/*    height: 8.3vh;*/
+/*  }*/
+/*  .btn {*/
+/*    width: 50px;*/
+/*    font-size: 10px;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 375px ) {*/
+/*.postTitle{*/
+/*  height: 10.5vh;*/
+
+/*}*/
+
+/*  .btn {*/
+/*    width: 50px;*/
+/*    font-size: 10px;*/
+/*  }*/
+/*}*/
+/*@media only screen and (max-width: 374px ) {*/
+/*  .postTitle{*/
+/*    height: 9.5vh;*/
+
+/*  }*/
+
+/*  .btn {*/
+/*    width: 50px;*/
+/*    font-size: 10px;*/
+/*  }*/
+/*}*/
+
+

@@ -1,8 +1,17 @@
+
+@media only screen and (min-width: 768px ) {
+  .cardTitle{
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
 @media only screen and (max-width: 768px ) {
   .postImage{
     width: 92%;
   }
   .cardTitle{
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+  font-size: 1.4rem;
   }
 }
